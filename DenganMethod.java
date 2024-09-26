@@ -5,11 +5,11 @@ public class DenganMethod {
         int tunjanganMakan = 300000;
         int bonus = 1000000;
 
-        int totalPenghasilan = hitungTotalPenghasilan(gajiPokok, tunjanganTransport, tunjanganMakan, bonus, gajiBersih);
+        int totalPenghasilan = hitungTotalPenghasilan(gajiPokok, tunjanganTransport, tunjanganMakan, bonus);
         int pajak = hitungpajak(totalPenghasilan);
         int gajiBersih = hitungGajiBersih(totalPenghasilan, pajak);
 
-        tampilkanDetailGaji(gajiPokok, tunjanganTransport, tunjanganMakan, bonus, pajak, gajiBersih)
+        tampilkanDetailGaji(gajiPokok, tunjanganTransport, tunjanganMakan, bonus, pajak, gajiBersih);
     }
 
     public static int hitungTotalPenghasilan(int gajiPokok, int tunjanganTransport, int tunjanganMakan, int bonus) {
@@ -24,7 +24,7 @@ public class DenganMethod {
         return totalPenghasilan - pajak;
     }
 
-    public static void tampilkanDetailGaji(int gajiPokok, int tunjanganTransport, int tunjanganMakan, int bonus, int pajak){
+    public static void tampilkanDetailGaji(int gajiPokok, int tunjanganTransport, int tunjanganMakan, int bonus, int pajak, int gajiBersih){
         System.out.println("Gaji Pokok" + gajiPokok);
         System.out.println("Tunjangan Transport" + tunjanganTransport);
         System.out.println("Tunjangan Makan" + tunjanganMakan);
